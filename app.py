@@ -13,7 +13,7 @@ st.set_page_config(
 )
 
 # Define the filename of your saved model
-MODEL_FILE = 'model\demand_forecasting_random_forest_model.pkl' # Updated file extension
+MODEL_FILE = '/model/demand_forecasting_random_forest_model.pkl' # Updated file extension
 # Define the features used by your FINAL model (must be in the exact order)
 TOP_FEATURES = [
     'Avg_Price_per_Unit',
@@ -193,4 +193,5 @@ if model:
                 title="Forecast vs. Historical Baseline",
                 color_discrete_map={'Historical Mean': 'gray', 'Historical Max': 'red', 'Your Forecast': 'green'}
             )
+
             st.plotly_chart(fig, use_container_width=True)
